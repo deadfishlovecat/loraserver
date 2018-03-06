@@ -1,12 +1,13 @@
 package cmd
 
 import (
-	"html/template"
 	"os"
+	"text/template"
 
-	"github.com/brocaar/loraserver/internal/config"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
+
+	"github.com/brocaar/loraserver/internal/config"
 )
 
 // when updating this template, don't forget to update config.md!
@@ -321,10 +322,10 @@ get_downlink_data_delay="{{ .NetworkServer.GetDownlinkDataDelay }}"
   # LoRa Gateway Bridge MQTT backend. Therefore only change these values when
   # absolutely needed.
   # Use "{{ "{{ .MAC }}" }}" as an substitution for the LoRa gateway MAC. 
-  uplink_topic_template="gateway/+/rx"
-  downlink_topic_template="gateway/{{ "{{ .MAC }}" }}/tx"
-  stats_topic_template="gateway/+/stats"
-  ack_topic_template="gateway/+/ack"
+  uplink_topic_template="{{ .NetworkServer.Gateway.Backend.MQTT.UplinkTopicTemplate }}"
+  downlink_topic_template="{{ .NetworkServer.Gateway.Backend.MQTT.DownlinkTopicTemplate }}"
+  stats_topic_template="{{ .NetworkServer.Gateway.Backend.MQTT.StatsTopicTemplate }}"
+  ack_topic_template="{{ .NetworkServer.Gateway.Backend.MQTT.AckTopicTemplate }}"
 
   # MQTT server (e.g. scheme://host:port where scheme is tcp, ssl or ws)
   server="{{ .NetworkServer.Gateway.Backend.MQTT.Server }}"
