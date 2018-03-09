@@ -91,16 +91,16 @@ It has these top-level messages:
 	UplinkFrameLog
 	DownlinkTXInfo
 	DownlinkFrameLog
-	GatewayConfiguration
-	GatewayConfigurationExtraChannel
-	CreateGatewayConfigurationRequest
-	CreateGatewayConfigurationResponse
-	GetGatewayConfigurationRequest
-	GetGatewayConfigurationResponse
-	UpdateGatewayConfigurationRequest
-	UpdateGatewayConfigurationResponse
-	DeleteGatewayConfigurationRequest
-	DeleteGatewayConfigurationResponse
+	GatewayProfile
+	GatewayProfileExtraChannel
+	CreateGatewayProfileRequest
+	CreateGatewayProfileResponse
+	GetGatewayProfileRequest
+	GetGatewayProfileResponse
+	UpdateGatewayProfileRequest
+	UpdateGatewayProfileResponse
+	DeleteGatewayProfileRequest
+	DeleteGatewayProfileResponse
 */
 package ns
 
